@@ -14,5 +14,5 @@ if __name__ == "__main__":
     dataList = dataString.split("\n")
     dataSheet = []
     for country in dataList[1:]:
-        dataSheet.append([item for item in country.split(",") if item != ""])
+        dataSheet.append(country.split(","))
 
