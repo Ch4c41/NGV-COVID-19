@@ -16,3 +16,4 @@ if __name__ == "__main__":
     for country in dataList[1:]:
         dataSheet.append(country.split(","))
 
+print("Done")
