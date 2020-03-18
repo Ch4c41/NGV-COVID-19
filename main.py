@@ -12,6 +12,7 @@ if __name__ == "__main__":
     r = requests.get(DATA_SITE)
     dataString = r.text
     dataList = dataString.split("\n")
+    dataKeys = dataList[0].split(",")
     dataSheet = []
     for country in dataList[1:]:
         dataSheet.append(country.split(","))
