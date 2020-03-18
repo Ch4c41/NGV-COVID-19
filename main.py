@@ -9,6 +9,7 @@ DATA_SITE  = "https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_1
 
 #Main
 if __name__ == "__main__":
+    #Aquiring and organizing data
     r = requests.get(DATA_SITE)
     dataString = r.text
     dataList = dataString.split("\n")
@@ -17,4 +18,4 @@ if __name__ == "__main__":
     for country in dataList[1:]:
         dataSheet.append(country.split(","))
 
-print("Done")
+print("Done") #Line to enable breakpoints for debug purposes
