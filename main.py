@@ -16,6 +16,3 @@ if __name__ == "__main__":
     for country in dataList[1:]:
         dataSheet.append([item for item in country.split(",") if item != ""])
 
-
-
-print("heihei")
