@@ -8,10 +8,11 @@ DATA_SITE  = "https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_1
 
 
 #Main
-
-
-
-
 if __name__ == "__main__":
     r = requests.get(DATA_SITE)
-    print(r.text)
+    dataString = r.text
+    dataList = dataString.split("\n")
+    dataSheet = []
+    for country in dataList[1:]:
+        dataSheet.append([item for item in country.split(",") if item != ""])
+
